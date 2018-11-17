@@ -2,59 +2,398 @@
 * {
   padding: 0;
   margin: 0;
-  border: none;
-  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
-  font-weight: 500;
-  width: 100%; }
+  border: none; }
 
-.container {
+body {
+  width: 1900px; }
+
+.header {
   height: 125px;
   position: relative; }
-  .container .upper {
+  .header .upper {
+    font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+    font-weight: 500;
+    padding: 0px;
+    font-size: 11px;
     color: white;
+    letter-spacing: 0px;
     background-color: #222222;
     height: 30px;
-    font-size: 10.8px;
-    padding: 0px 0px 0px 1303px; }
-    .container .upper p {
+    padding-left: 1300px; }
+    .header .upper p {
       position: absolute;
-      width: 202px;
-      padding-top: 8px;
-      letter-spacing: 0px; }
-  .container .lower {
+      width: 205px;
+      padding-top: 8px; }
+  .header .lower {
     display: flex; }
-    .container .lower img {
+    .header .lower img {
       display: inline-block;
       padding-top: 25px;
       padding-left: 395px;
       width: 235px;
       float: left;
       height: 100%; }
-    .container .lower .headerBtn {
+    .header .lower .headerBtn {
       display: flex;
       margin-left: 175px;
+      width: 700px;
       font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif; }
-    .container .lower .item {
+    .header .lower .itemHeader {
+      font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+      font-weight: 500;
+      padding: 0px;
       font-size: 15px;
+      color: black;
+      letter-spacing: 1px;
+      display: inline-block;
       background-color: white;
       text-align: left;
-      max-width: 60px;
+      width: 65px;
       height: 35px;
-      margin: 27px 45px 0px 0px;
-      letter-spacing: 0px;
-      word-spacing: 0px; }
-    .container .lower .shorter {
+      margin: 27px 40px 0px 0px; }
+    .header .lower .shorter {
+      width: 55px;
       letter-spacing: -2px; }
-    .container .lower .longer {
-      max-width: 99px;
+    .header .lower .longer {
+      width: 90px;
       letter-spacing: 0px;
-      margin-right: 0; }
-    .container .lower .item:hover {
+      margin-right: 0px; }
+    .header .lower .itemHeader:hover {
       cursor: pointer;
       font-weight: bolder;
       transition: 1s 0.25s;
       -moz-transition: 0.3s 0s;
       -webkit-transition: 0.3s 0s;
       border-bottom: 2px black solid; }
+
+.mainvisual {
+  height: 540px; }
+  .mainvisual #mainVisualImg {
+    z-index: 1;
+    position: absolute;
+    width: 1900px;
+    height: 540px; }
+  .mainvisual .mainTxt {
+    z-index: 2;
+    position: absolute;
+    margin: 0px; }
+  .mainvisual .mainTxtImg {
+    width: 615px;
+    height: 60px;
+    padding: 180px 655px; }
+  .mainvisual .mainTxt_1 {
+    font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+    font-weight: 500;
+    padding: 0px;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 0px;
+    width: 470px;
+    padding: 295px 737px 0px; }
+  .mainvisual .mainTxt_2 {
+    font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+    font-weight: 500;
+    padding: 0px;
+    font-size: 20px;
+    color: white;
+    letter-spacing: -1px;
+    width: 410px;
+    padding: 335px 760px 0px; }
+
+.serviceContainer {
+  background-color: #eeeeee;
+  height: 915px;
+  border: 1px solid #eeeeee;
+  margin: 0px; }
+  .serviceContainer .service {
+    background-color: white;
+    width: 1110px;
+    height: 765px;
+    margin: 60px 395px 90px; }
+  .serviceContainer .tab1 {
+    background-color: #fcd000;
+    height: 85px; }
+  .serviceContainer .serviceTxt_1 {
+    font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+    font-weight: 500;
+    margin: auto;
+    font-size: 23px;
+    color: black;
+    letter-spacing: -3px;
+    width: 160px;
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+    font-weight: 900;
+    padding-top: 10px;
+    margin-bottom: 0px; }
+  .serviceContainer .serviceTxt_2 {
+    font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+    font-weight: 500;
+    margin: auto;
+    font-size: 14px;
+    color: black;
+    letter-spacing: 0px;
+    width: 255px; }
+  .serviceContainer .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #fcd000;
+    margin-left: 545px; }
+  .serviceContainer .mainService {
+    display: flex;
+    width: 980px;
+    margin: 55px 65px 60px; }
+    .serviceContainer .mainService .itemService {
+      width: 490px;
+      height: 300px; }
+    .serviceContainer .mainService .serviceTxt_3 {
+      font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+      font-weight: 500;
+      padding: 0px;
+      font-size: 25px;
+      color: black;
+      letter-spacing: 2px;
+      margin-left: 20px; }
+    .serviceContainer .mainService .serviceTxt_4 {
+      font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+      font-weight: 500;
+      padding: 0px;
+      font-size: 15px;
+      color: black;
+      letter-spacing: -2px;
+      margin-left: 20px; }
+    .serviceContainer .mainService .serviceBtn {
+      font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+      font-weight: 500;
+      padding: 0px;
+      font-size: 15px;
+      color: black;
+      letter-spacing: 1px;
+      font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+      background-color: #fcd000;
+      width: 350px;
+      height: 55px;
+      margin: 75px 0px 0px 20px; }
+    .serviceContainer .mainService .serviceBtn:hover {
+      cursor: pointer; }
+  .serviceContainer .guide {
+    display: flex;
+    width: 980px;
+    height: 190px;
+    margin: 0px 60px 0px; }
+    .serviceContainer .guide .serviceGuide {
+      text-align: center;
+      color: white;
+      background-color: #222222;
+      width: 265px; }
+      .serviceContainer .guide .serviceGuide .serviceTxt_5 {
+        font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+        font-weight: 500;
+        padding: 0px;
+        font-size: 19px;
+        color: white;
+        letter-spacing: 1px;
+        font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+        padding-top: 70px; }
+      .serviceContainer .guide .serviceGuide .serviceTxt_6 {
+        font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+        font-weight: 500;
+        padding: 0px;
+        font-size: 12px;
+        color: white;
+        letter-spacing: 1px; }
+    .serviceContainer .guide .itemServiceGuide {
+      background-color: #eeeeee;
+      text-align: center;
+      padding: 30px 33px 0px; }
+      .serviceContainer .guide .itemServiceGuide img {
+        width: 96px;
+        height: 96px;
+        -moz-border-radius: 48px;
+        -webkit-border-radius: 48px;
+        --border-radius: 48px;
+        border-radius: 48px; }
+      .serviceContainer .guide .itemServiceGuide p {
+        font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+        font-weight: 500;
+        padding: 0px;
+        font-size: 14px;
+        color: black;
+        letter-spacing: -1px; }
+    .serviceContainer .guide .itemServiceGuide.first {
+      padding-left: 66px; }
+    .serviceContainer .guide .itemServiceGuide.last {
+      padding-right: 66px; }
+
+.newsContainer h1 {
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  font-weight: 500;
+  margin: auto;
+  font-size: none;
+  color: black;
+  letter-spacing: 1px;
+  width: 95px;
+  font-weight: bold;
+  padding-top: 60px; }
+.newsContainer .newsTxt_1 {
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  font-weight: 500;
+  margin: auto;
+  font-size: 14px;
+  color: black;
+  letter-spacing: 0px;
+  width: 115px;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif; }
+.newsContainer .newsTxt_2 {
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  font-weight: 500;
+  margin: auto;
+  font-size: 14px;
+  color: black;
+  letter-spacing: 0px;
+  width: 1000px;
+  padding-left: 1365px; }
+.newsContainer .line {
+  width: 1005px;
+  margin: 0px 445px 0px;
+  border-bottom: 1px solid black; }
+.newsContainer .rows {
+  padding: 10px 445px 0px;
+  height: 340px;
+  width: 1005px;
+  margin-top: 50px; }
+  .newsContainer .rows .date {
+    margin-right: 35px; }
+  .newsContainer .rows .fa-angle-right {
+    float: right; }
+  .newsContainer .rows .label {
+    font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+    font-weight: 500;
+    padding: 0px;
+    font-size: 14px;
+    color: white;
+    letter-spacing: 1px;
+    background-color: #fcd000;
+    text-align: center;
+    display: inline-block;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    --border-radius: 30px;
+    border-radius: 30px;
+    width: 120px;
+    height: 27px;
+    margin-right: 10px; }
+  .newsContainer .rows .title {
+    font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+    font-weight: 500;
+    padding: 0px;
+    font-size: 15px;
+    color: black;
+    letter-spacing: 0px;
+    margin-left: 25px; }
+  .newsContainer .rows .lineDotted {
+    border-bottom: 1px dotted black;
+    margin: 20px 0px 20px; }
+
+.company {
+  background-color: #eeeeee;
+  display: flex;
+  width: 1110px;
+  height: 420px;
+  margin: 75px 395px 0px; }
+  .company img {
+    width: 555px; }
+  .company .companyInfor {
+    width: 555px; }
+    .company .companyInfor .companyTxt_1 {
+      font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+      font-weight: 500;
+      padding: 0px;
+      font-size: 16px;
+      color: black;
+      letter-spacing: 1px;
+      font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+      text-align: center;
+      width: 85px;
+      height: 25px;
+      border: 1px black solid;
+      margin: 45px 0px 0px 45px; }
+    .company .companyInfor .companyTxt_2 {
+      font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+      font-weight: 500;
+      padding: 0px;
+      font-size: 18px;
+      color: black;
+      letter-spacing: 1px;
+      margin: 15px 0px 0px 45px; }
+    .company .companyInfor .companyTxt_3 {
+      font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+      font-weight: 500;
+      padding: 0px;
+      font-size: 14px;
+      color: black;
+      letter-spacing: 0px;
+      margin: 35px 0px 0px 45px; }
+    .company .companyInfor .companyBtn {
+      font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+      font-weight: 500;
+      padding: 0px;
+      font-size: 15px;
+      color: black;
+      letter-spacing: 1px;
+      font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+      background-color: #fcd000;
+      width: 350px;
+      height: 55px;
+      margin: 50px 0px 0px 45px; }
+    .company .companyInfor .companyBtn:hover {
+      cursor: pointer; }
+
+.recruitContainer {
+  display: flex;
+  width: 1110px;
+  height: 250px;
+  margin: 100px 395px 0px; }
+  .recruitContainer .recruitInfor {
+    background-color: #fcd000;
+    width: 450px; }
+    .recruitContainer .recruitInfor .recruitTxt_1 {
+      font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+      font-weight: 500;
+      padding: 0px;
+      font-size: 16px;
+      color: black;
+      letter-spacing: 1px;
+      font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+      text-align: center;
+      width: 165px;
+      height: 25px;
+      border: 1px black solid;
+      margin: 45px 0px 0px 50px; }
+    .recruitContainer .recruitInfor .recruitTxt_2 {
+      font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+      font-weight: 500;
+      padding: 0px;
+      font-size: 22px;
+      color: black;
+      letter-spacing: 1px;
+      margin: 15px 0px 0px 45px; }
+    .recruitContainer .recruitInfor .recruitTxt_3 {
+      font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+      font-weight: 500;
+      padding: 0px;
+      font-size: 15px;
+      color: black;
+      letter-spacing: 0px;
+      margin: 30px 0px 0px 45px; }
+    .recruitContainer .recruitInfor .recruitTxt_4 {
+      font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+      font-weight: 500;
+      padding: 0px;
+      font-size: 15px;
+      color: black;
+      letter-spacing: 0px;
+      margin-left: 45px; }
 
 /*# sourceMappingURL=style.css.map */

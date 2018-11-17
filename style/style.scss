@@ -2,24 +2,44 @@
 	padding: 0;
 	margin: 0;
 	border: none;
+}
+body {
+	width: 1900px;
+}
+$bgColor: #fcd000;
+$font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+// format text
+@mixin text($fontSize, $color, $letterSpacing) {
 	font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
 	font-weight: 500;
-	width:100%;
+	padding: 0px;
+	font-size: $fontSize;
+	color: $color;
+	letter-spacing: $letterSpacing;
 }
-.container {
+// format and align center
+@mixin textCenter($fontSize, $color, $letterSpacing, $width) {
+	font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+	font-weight: 500;
+	margin: auto;
+	font-size: $fontSize;
+	color: $color;
+	letter-spacing: $letterSpacing;
+	width: $width;
+}
+// scss header 
+.header {
 	height: 125px;
 	position: relative;
 	.upper {
-		color: white;
+		@include text(11px, white, 0px);
 		background-color: #222222;
 		height: 30px;
-		font-size: 10.8px;
-		padding: 0px 0px 0px 1303px;
+		padding-left: 1300px;
 		p {
 			position: absolute;
-			width: 202px;
+			width: 205px;
 			padding-top: 8px;
-			letter-spacing: 0px;
 		}
 	}
 	.lower {
@@ -35,34 +55,298 @@
 		.headerBtn {
 			display: flex;
 			margin-left: 175px;
+			width: 700px;
 			font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
-
 		}
-		.item {
-			font-size: 15px;
+		.itemHeader {
+			@include text(15px, black, 1px);
+			display: inline-block;
 			background-color: white;
 			text-align: left;
-			max-width: 60px;
+			width: 65px;
 			height: 35px;
-			margin: 27px 45px 0px 0px;
-			letter-spacing: 0px;
-			word-spacing: 0px;
+			margin: 27px 40px 0px 0px;
+			// border: 1px solid black;
 		}
 		.shorter {
+			width: 55px;
 			letter-spacing: -2px;
 		}
 		.longer {
-			max-width: 99px;
+			width: 90px;
 			letter-spacing: 0px;
-			margin-right: 0;
+			margin-right: 0px;
 		}
-		.item:hover {
+		.itemHeader:hover {
 			cursor: pointer;
 			font-weight: bolder;
 			transition: 1s 0.25s;
   			-moz-transition: 0.3s 0s;
   			-webkit-transition: 0.3s 0s;
 			border-bottom: 2px black solid;
+		}
+	}
+}
+// mainvisual
+.mainvisual {
+	height: 540px;
+	#mainVisualImg {
+	z-index: 1;
+	position: absolute;
+	width: 1900px;
+	height: 540px;
+	}
+	.mainTxt {
+		z-index: 2;
+		position: absolute;
+		margin: 0px;
+	}
+	.mainTxtImg {
+		width: 615px;
+		height: 60px;
+		padding: 180px 655px;
+	}
+	.mainTxt_1 {
+		@include text(20px, white, 0px);
+		width: 470px;
+		padding: 295px 737px 0px;
+	}
+	.mainTxt_2 {
+		@include text(20px, white, -1px);
+		width: 410px;
+		padding: 335px 760px 0px;
+	}
+}
+// service
+.serviceContainer {
+	background-color: #eeeeee;
+	height: 915px;
+	border: 1px solid #eeeeee;
+	margin: 0px;
+	.service {
+		background-color: white;
+		width: 1110px;
+		height: 765px;
+		margin: 60px 395px 90px;
+	}
+	.tab1{
+		background-color: $bgColor;
+		height: 85px;
+	}
+	.serviceTxt_1 {
+		@include textCenter(23px, black, -3px, 160px);
+		font-family: $font2;
+		font-weight: 900;
+		padding-top: 10px;
+		margin-bottom: 0px;
+	}
+	.serviceTxt_2 {
+		@include textCenter(14px, black, 0px, 255px);
+	}
+	.arrow-down {
+		width: 0;
+		height: 0;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-top: 10px solid $bgColor;
+		margin-left: 545px;
+	}
+	.mainService {
+		display: flex;
+		width: 980px;
+		margin: 55px 65px 60px;
+		.itemService {
+			width: 490px;
+			height: 300px;
+		}
+		.serviceTxt_3 {
+			@include text(25px, black, 2px);
+			margin-left: 20px;
+		}
+		.serviceTxt_4 {
+			@include text(15px, black, -2px);
+			margin-left: 20px;
+		}
+		.serviceBtn {
+			@include text(15px, black, 1px);
+			font-family: $font2;
+			background-color: $bgColor;
+			width: 350px;
+			height: 55px;
+			margin: 75px 0px 0px 20px;
+		}
+		.serviceBtn:hover {
+			cursor: pointer;
+		}
+	}
+	.guide {
+		display: flex;
+		width: 980px;
+		height: 190px;
+		margin: 0px 60px 0px;
+		.serviceGuide {
+			text-align: center;
+			color: white;
+			background-color: #222222;
+			width: 265px;
+			.serviceTxt_5 {
+				@include text(19px, white, 1px);
+				font-family: $font2;
+				padding-top: 70px;
+			}
+			.serviceTxt_6 {
+				@include text(12px, white, 1px);
+			}
+		}
+		.itemServiceGuide {
+			background-color: #eeeeee;
+			text-align: center;
+			padding: 30px 33px 0px;
+			img {
+				width: 96px;
+				height: 96px;
+				-moz-border-radius: 48px;
+    			-webkit-border-radius: 48px;
+    			--border-radius: 48px;
+				border-radius: 48px;
+			}
+			p {
+				@include text(14px, black, -1px);
+			}
+		}
+		.itemServiceGuide.first {
+			padding-left: 66px;
+		}
+		.itemServiceGuide.last {
+			padding-right: 66px;
+		}
+	}
+}
+// news
+.newsContainer {
+	h1 {
+		@include textCenter(none, black, 1px, 95px);
+		font-weight: bold;
+		padding-top: 60px;
+	}
+	.newsTxt_1 {
+		@include textCenter(14px, black, 0px, 115px);
+		font-family: $font2;
+	}
+	.newsTxt_2 {
+		@include textCenter(14px, black, 0px, 1000px);
+		padding-left: 1365px;
+	}
+	.line {
+		width: 1005px;
+		margin: 0px 445px 0px;
+		border-bottom: 1px solid black;
+	}
+	.rows {
+		padding: 10px 445px 0px;
+		height: 340px;
+		width: 1005px;
+		margin-top: 50px;
+		.date {
+			margin-right: 35px;
+		}
+		.fa-angle-right {
+			float: right;
+		}
+		.label {
+			@include text(14px, white, 1px);
+			background-color: $bgColor;
+			text-align: center;
+			display: inline-block;
+			-moz-border-radius: 30px;
+			-webkit-border-radius: 30px;
+			--border-radius: 30px;
+			border-radius: 30px;
+			width: 120px;
+			height: 27px;
+			margin-right: 10px;
+		}
+		.title {
+			@include text(15px, black, 0px);
+			margin-left: 25px;
+		}
+		.lineDotted {
+			border-bottom: 1px dotted black;
+			margin: 20px 0px 20px;
+		}
+	}
+}
+// company
+.company {
+	background-color: #eeeeee;
+	display: flex;
+	width: 1110px;
+	height: 420px;
+	margin: 75px 395px 0px;
+	img {
+		width: 555px;
+	}
+	.companyInfor {
+		width: 555px;
+		.companyTxt_1 {
+			@include text(16px, black, 1px);
+			font-family: $font2;
+			text-align: center;
+			width: 85px;
+			height: 25px;
+			border: 1px black solid;
+			margin: 45px 0px 0px 45px;
+		}
+		.companyTxt_2 {
+			@include text(18px, black, 1px);
+			margin: 15px 0px 0px 45px;
+		}
+		.companyTxt_3 {
+			@include text(14px, black, 0px);
+			margin: 35px 0px 0px 45px;
+		}
+		.companyBtn {
+			@include text(15px, black, 1px);
+			font-family: $font2;
+			background-color: $bgColor;
+			width: 350px;
+			height: 55px;
+			margin: 50px 0px 0px 45px; 
+		}
+		.companyBtn:hover {
+			cursor: pointer;
+		}
+	}
+}
+// recruit 
+.recruitContainer {
+	display: flex;
+	width: 1110px;
+	height: 250px;
+	margin: 100px 395px 0px;
+	.recruitInfor {
+		background-color: $bgColor;
+		width: 450px;
+		.recruitTxt_1 {
+			@include text(16px, black, 1px);
+			font-family: $font2;
+			text-align: center;
+			width: 165px;
+			height: 25px;
+			border: 1px black solid;
+			margin: 45px 0px 0px 50px;
+		}
+		.recruitTxt_2 {
+			@include text(22px, black, 1px);
+			margin: 15px 0px 0px 45px;
+		}
+		.recruitTxt_3 {
+			@include text(15px, black, 0px);
+			margin: 30px 0px 0px 45px;
+		}
+		.recruitTxt_4 {
+			@include text(15px, black, 0px);
+			margin-left: 45px;
 		}
 	}
 }
