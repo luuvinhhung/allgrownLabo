@@ -7,9 +7,6 @@
 body {
   width: 1900px; }
 
-img {
-  width: 100%; }
-
 .header {
   height: 125px;
   position: relative; }
@@ -149,6 +146,8 @@ img {
     .serviceContainer .mainService .itemService {
       width: 490px;
       height: 300px; }
+      .serviceContainer .mainService .itemService img {
+        width: 475px; }
     .serviceContainer .mainService .serviceTxt_3 {
       font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
       font-weight: 500;
@@ -268,7 +267,9 @@ img {
   .newsContainer .rows .date {
     margin-right: 35px; }
   .newsContainer .rows .fa-angle-right {
-    float: right; }
+    float: right;
+    font-size: 14px;
+    padding-top: 11px; }
   .newsContainer .rows .label {
     font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
     font-weight: 500;
@@ -327,9 +328,10 @@ img {
       font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
       font-weight: 500;
       padding: 0px;
-      font-size: 18px;
+      font-size: 19px;
       color: black;
       letter-spacing: 1px;
+      font-weight: 600;
       margin: 15px 0px 0px 45px; }
     .company .companyInfor .companyTxt_3 {
       font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
@@ -433,9 +435,9 @@ img {
     width: 349px;
     height: 75px;
     color: white;
-    background-color: #222222;
+    background-color: black;
     border: 1px solid white;
-    opacity: 0.9; }
+    opacity: 0.7; }
     .contactContainer .contactBtn .contactTitle {
       font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
       font-weight: 500;
@@ -460,6 +462,7 @@ img {
     font-size: 17px;
     color: white;
     letter-spacing: 1px;
+    opacity: 1;
     border: 0px;
     background-color: #82141a;
     margin-left: 30px; }
@@ -514,7 +517,7 @@ img {
       font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
       font-weight: 500;
       margin: auto;
-      font-size: 13px;
+      font-size: 12px;
       color: white;
       letter-spacing: 1px;
       width: 250px;

@@ -6,9 +6,6 @@
 body {
 	width: 1900px;
 }
-img {
-	width: 100%;
-}
 $bgColor: #fcd000;
 $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
 // format text
@@ -58,7 +55,7 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 			display: flex;
 			margin-left: 175px;
 			width: 700px;
-			font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+			font-family: $font2;
 		}
 		.itemHeader {
 			@include text(15px, black, 1px);
@@ -160,6 +157,9 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 		.itemService {
 			width: 490px;
 			height: 300px;
+			img {
+				width: 475px;
+			}
 		}
 		.serviceTxt_3 {
 			@include text(25px, black, 2px);
@@ -254,6 +254,8 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 		}
 		.fa-angle-right {
 			float: right;
+			font-size: 14px;
+			padding-top: 11px;
 		}
 		.label {
 			@include text(14px, white, 1px);
@@ -302,7 +304,8 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 			padding-top: 3px;
 		}
 		.companyTxt_2 {
-			@include text(18px, black, 1px);
+			@include text(19px, black, 1px);
+			font-weight: 600;
 			margin: 15px 0px 0px 45px;
 		}
 		.companyTxt_3 {
@@ -387,9 +390,9 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 		width: 349px;
 		height: 75px;
 		color: white;
-		background-color: #222222;
+		background-color: black;
 		border: 1px solid white;
-		opacity: 0.9;
+		opacity: 0.7;
 		.contactTitle {
 			@include text(13px, white, 1px);
 			padding-top: 6px;
@@ -403,6 +406,7 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 	}
 	.last {
 		@include text(17px, white, 1px);
+		opacity: 1;
 		border: 0px;
 		background-color: #82141a;
 		margin-left: 30px;
@@ -455,7 +459,7 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 		background-color: #222222;
 		height: 55px;
 		p {
-			@include textCenter(13px, white, 1px, 250px);
+			@include textCenter(12px, white, 1px, 250px);
 			padding-top: 20px;
 		}
 	}
