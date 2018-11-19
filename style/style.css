@@ -419,27 +419,28 @@ body {
     width: 1110px;
     margin: 30px 395px 0px; }
   .contactContainer .contactBtn {
+    font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+    font-weight: 500;
+    padding: 0px;
+    font-size: 13px;
+    color: white;
+    letter-spacing: 1px;
     width: 349px;
-    height: 75px;
+    height: 70px;
     color: white;
     background-color: black;
     border: 1px solid white;
-    opacity: 0.7; }
-    .contactContainer .contactBtn .contactTitle {
-      font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
-      font-weight: 500;
-      padding: 0px;
-      font-size: 13px;
-      color: white;
-      letter-spacing: 1px;
-      padding-top: 6px; }
+    opacity: 0.7;
+    text-align: center;
+    line-height: 25px; }
     .contactContainer .contactBtn .phone {
       font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
       font-weight: 500;
       padding: 0px;
-      font-size: 27px;
+      font-size: 32px;
       color: white;
-      letter-spacing: 1px; }
+      letter-spacing: 1px;
+      margin-top: 15px; }
   .contactContainer .first {
     margin-right: 30px; }
   .contactContainer .last {

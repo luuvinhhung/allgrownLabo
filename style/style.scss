@@ -369,18 +369,18 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 		margin: 30px 395px 0px;
 	}
 	.contactBtn {
+		@include text(13px, white, 1px);
 		width: 349px;
-		height: 75px;
+		height: 70px;
 		color: white;
 		background-color: black;
 		border: 1px solid white;
 		opacity: 0.7;
-		.contactTitle {
-			@include text(13px, white, 1px);
-			padding-top: 6px;
-		}
+		text-align: center;
+		line-height: 25px;
 		.phone {
-			@include text(27px, white, 1px);
+			@include text(32px, white, 1px);
+			margin-top: 15px;
 		}
 	}
 	.first {
