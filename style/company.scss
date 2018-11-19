@@ -1,0 +1,185 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+body {
+	width: 1900px;
+}
+$bgColor: #fcd000;
+$font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+// format text
+@mixin text($fontSize, $color, $letterSpacing) {
+	font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+	font-weight: 500;
+	padding: 0px;
+	font-size: $fontSize;
+	color: $color;
+	letter-spacing: $letterSpacing;
+}
+// format and align center
+@mixin textCenter($fontSize, $color, $letterSpacing, $width) {
+	font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+	font-weight: 500;
+	margin: auto;
+	font-size: $fontSize;
+	color: $color;
+	letter-spacing: $letterSpacing;
+	width: $width;
+}
+// scss header 
+.header {
+	height: 125px;
+	position: relative;
+	.upper {
+		@include text(11px, white, 0px);
+		background-color: #222222;
+		height: 30px;
+		padding-left: 1300px;
+		p {
+			position: absolute;
+			width: 205px;
+			padding-top: 8px;
+		}
+	}
+	.lower {
+		display: flex;
+		img {
+			display: inline-block;
+			padding-top: 25px;
+			padding-left: 395px;
+			width: 235px;
+			height: 100%;
+		}
+		.headerBtn {
+			display: flex;
+			margin-left: 175px;
+			width: 700px;
+			font-family: $font2;
+		}
+		.itemHeader {
+			@include text(15px, black, 1px);
+			display: inline-block;
+			background-color: white;
+			text-align: left;
+			width: 65px;
+			height: 35px;
+			margin: 27px 40px 0px 0px;
+			// border: 1px solid black;
+		}
+		.shorter {
+			width: 55px;
+			letter-spacing: -2px;
+		}
+		.longer {
+			width: 90px;
+			letter-spacing: 0px;
+			margin-right: 0px;
+		}
+		.itemHeader:hover {
+			cursor: pointer;
+			font-weight: bolder;
+			transition: 1s 0.25s;
+  			-moz-transition: 0.3s 0s;
+  			-webkit-transition: 0.3s 0s;
+			border-bottom: 2px black solid;
+		}
+	}
+}
+// mainvisual
+.mainvisual {
+	height: 430px;
+	#mainVisualImg {
+	z-index: 1;
+	position: absolute;
+	width: 1900px;
+	height: 430px;
+	}
+	.mainTxt {
+		z-index: 2;
+		position: absolute;
+		margin: 0px;
+    }
+    .overlay {
+        width: 1900px;
+        height: 430px;
+        background-color: black;
+        opacity: 0.3;
+    }
+	.mainTxt_1 {
+        @include text(20px, white, 2px);
+        text-transform: inherit;
+        width: 188px;
+        height: 42px;
+        text-align: center;
+        border: 2px white solid;
+        margin: 160px 850px 0px;
+        padding-top: 8px;
+	}
+	.mainTxt_2 {
+        @include text(36px, white, 1px);
+        font-family: $font2;
+        width: 160px;
+        margin: 226px 870px 0px;
+        font-weight: 900;
+        text-shadow: 2px 2px 20px black;
+	}
+}
+// breakcrumb
+.breakcrumb {
+    @include text(14px, black, 1px);
+    text-transform: inherit;
+    background-color: #eeeeee;
+    height: 28px;
+    padding: 7px 395px 0px;
+}
+.mainContent {
+    .mainContentTxt_1 {
+        @include textCenter(32px, black, 1px, 520px);
+        font-family: $font2;
+        padding: 70px 690px 0px;
+    }
+    .mainContentTxt_2 {
+        @include textCenter(25px, black, 1px, 330px);
+        font-family: $font2;
+        word-spacing: 2px;
+        padding: 10px 780px 0px;
+    }
+    .line {
+        margin: 40px 885px 0px;
+        display: flex;
+    }
+    .line1 {
+        width: 65px;
+        border-bottom:  3px solid black;
+    }
+    .line2 {
+        width: 65px;
+        border-bottom: 3px solid $bgColor;
+    }
+    .content {
+        @include textCenter(15px, black, 0px, 730px);
+        text-align: center;
+        margin-top: 60px;
+	}
+	.blocks {
+		display: flex;
+		width: 1210px;
+		height: 270px;
+		margin: 30px 395px 0px;
+		
+		.block {
+			@include text(13px, white, 0xp);
+			img {
+				position: absolute;
+				z-index: 1;
+				width: 350px;
+				height: 270px;
+			}
+			p {
+				position: absolute;
+				z-index: 2;
+			}
+		}
+	}
+}
