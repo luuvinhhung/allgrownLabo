@@ -164,22 +164,140 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 	}
 	.blocks {
 		display: flex;
-		width: 1210px;
+		width: 1110px;
 		height: 270px;
-		margin: 30px 395px 0px;
-		
+		margin: 75px 395px 0px;
 		.block {
-			@include text(13px, white, 0xp);
-			img {
-				position: absolute;
-				z-index: 1;
-				width: 350px;
-				height: 270px;
-			}
+			width: 350px;
 			p {
-				position: absolute;
-				z-index: 2;
+				@include textCenter(20px, white, 0px, 200px);
+				text-align: center;
 			}
+			.row2 {
+				margin-top: 0px;
+			}
+			transition: all 1s;
+			-webkit-transition: all 1s;
+			-moz-transition: all 1s;
+			-o-transition: all 1s;
+		}
+		.block1 {
+			background-image: url("../images/block1.png");
+			background-size: 350px 270px;
+			padding-top: 105px;
+		}
+		.block2 {
+			background-image: url("../images/block2.png");
+			background-size: 350px 270px;
+			margin: 0px 30px 0px;
+			padding-top: 125px;
+		}
+		.block3 {
+			background-image: url("../images/block3.png");
+			background-size: 350px 270px;
+			padding-top: 125px;
+		}
+		.background-image:hover {
+			transform: scale(1.2, 1.2);
+-webkit-transform: scale(1.2, 1.2);
+-moz-transform: scale(1.2, 1.2);
+-o-transform: scale(1.2, 1.2);
+-ms-transform: scale(1.2, 1.2);
+		}
+	}
+}
+// contact
+.contactContainer {
+	height: 410px;
+	background-image: url("../images/indexContactImg2.png");
+	background-size: 1900px;
+	margin-top: 100px;
+	.contactTxt_1 {
+		@include textCenter(28px, white, -3px, 420px);
+		font-family: $font2;
+		padding-top: 125px;
+		text-shadow: 2px 2px 20px black;
+	}
+	.buttonsContact {
+		display: flex;
+		width: 1110px;
+		margin: 30px 395px 0px;
+	}
+	.contactBtn {
+		width: 349px;
+		height: 75px;
+		color: white;
+		background-color: black;
+		border: 1px solid white;
+		opacity: 0.7;
+		.contactTitle {
+			@include text(13px, white, 1px);
+			padding-top: 6px;
+		}
+		.phone {
+			@include text(27px, white, 1px);
+		}
+	}
+	.first {
+		margin-right: 30px;
+	}
+	.last {
+		@include text(17px, white, 1px);
+		opacity: 1;
+		border: 0px;
+		background-color: #82141a;
+		margin-left: 30px;
+	}
+	.contactBtn:hover {
+		cursor: pointer;
+		opacity: 1;
+	}
+}
+.footer {
+	height: 430px;
+	.main {
+		width: 1110px;
+		margin: 0px 395px 0px;
+		.infor {
+			@include text(16, black, 1px);
+			display: flex;
+			padding-top: 40px;
+			img {
+				display: inline-block;
+				width: 235px;
+				height: 100%;
+				margin-right: 70px;
+			}
+		}
+		.lineDotted {
+			border-bottom: 1px dotted black;
+			margin: 45px 0px 40px;
+		}
+		.lists {
+			@include text(15px, black, 0px);
+			display: flex;
+			.list {
+				width: 120px;
+				margin-right: 100px;
+				.title {
+					margin-bottom: 15px;
+				}
+			}
+			.last {
+				width: 150px;
+				margin-right: 70px;
+			}
+		}
+		.bottom {
+			margin: 55px 0px 50px;
+		}
+	}
+	footer {
+		background-color: #222222;
+		height: 55px;
+		p {
+			@include textCenter(12px, white, 1px, 250px);
+			padding-top: 20px;
 		}
 	}
 }
