@@ -80,8 +80,9 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 			cursor: pointer;
 			font-weight: bolder;
 			transition: 1s 0.25s;
-  			-moz-transition: 0.3s 0s;
-  			-webkit-transition: 0.3s 0s;
+  			-moz-transition: 1s 0.25s;
+			-webkit-transition: 1s 0.25s;
+			-o-transition: 1s 0.25s;
 			border-bottom: 2px black solid;
 		}
 	}
@@ -200,7 +201,6 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 				height: 96px;
 				-moz-border-radius: 48px;
     			-webkit-border-radius: 48px;
-    			--border-radius: 48px;
 				border-radius: 48px;
 			}
 			p {
