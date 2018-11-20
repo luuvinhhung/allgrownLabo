@@ -8,6 +8,7 @@ body {
 }
 $bgColor: #fcd000;
 $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+$widthSP: 768px;
 // format text
 @mixin text($fontSize, $color, $letterSpacing) {
 	font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
@@ -90,7 +91,7 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 // mainvisual
 .mainvisual {
 	height: 430px;
-	#mainVisualImg {
+	.mainVisualImg {
 	z-index: 1;
 	position: absolute;
 	width: 1900px;
@@ -114,7 +115,7 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
         height: 42px;
         text-align: center;
         border: 2px white solid;
-        margin: 160px 850px 0px;
+        margin: 160px 0px 0px 850px;
         padding-top: 8px;
 	}
 	.mainTxt_2 {
@@ -161,13 +162,13 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
     .content {
         @include textCenter(15px, black, 0px, 730px);
         text-align: center;
-        margin-top: 60px;
+        margin-top: 60px!important;
 	}
 	.blocks {
 		display: flex;
 		width: 1110px;
 		height: 270px;
-		margin: 75px 395px 0px;
+		margin: 75px 0px 0px 395px;
 		.block {
 			width: 350px;
 			p {
@@ -177,10 +178,6 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 			.row2 {
 				margin-top: 0px;
 			}
-			transition: all 1s;
-			-webkit-transition: all 1s;
-			-moz-transition: all 1s;
-			-o-transition: all 1s;
 		}
 		.block1 {
 			background-image: url("../images/block1.png");
@@ -198,13 +195,13 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 			background-size: 350px 270px;
 			padding-top: 125px;
 		}
-		.background-image:hover {
-			transform: scale(1.2, 1.2);
--webkit-transform: scale(1.2, 1.2);
--moz-transform: scale(1.2, 1.2);
--o-transform: scale(1.2, 1.2);
--ms-transform: scale(1.2, 1.2);
-		}
+		// .background-image:hover {
+		// 	transform: scale(1.2, 1.2);
+		// 	-webkit-transform: scale(1.2, 1.2);
+		// 	-moz-transform: scale(1.2, 1.2);
+		// 	-o-transform: scale(1.2, 1.2);
+		// 	-ms-transform: scale(1.2, 1.2);
+		// }
 	}
 }
 // contact
@@ -236,7 +233,7 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 		line-height: 25px;
 		.phone {
 			@include text(32px, white, 1px);
-			margin-top: 15px;
+			margin-top: 15px!important;;
 		}
 	}
 	.first {
@@ -244,9 +241,9 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 	}
 	.last {
 		@include text(17px, white, 1px);
-		opacity: 1;
-		border: 0px;
-		background-color: #82141a;
+		opacity: 1!important;
+		border: 0px!important;
+		background-color: #82141a!important;
 		margin-left: 30px;
 	}
 	.contactBtn:hover {
@@ -268,6 +265,9 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 				width: 235px;
 				height: 100%;
 				margin-right: 70px;
+			}
+			.textFooterSP {
+				display: none;
 			}
 		}
 		.lineDotted {
@@ -299,6 +299,177 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 		p {
 			@include textCenter(12px, white, 1px, 250px);
 			padding-top: 20px;
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	* {
+		max-width: $widthSP!important;
+		margin: 0px;
+		padding: 0px;
+	}
+	body {
+		max-width: $widthSP;
+		margin: 0px;
+		padding: 0px;
+	}
+	.header{
+		height: 115px;
+		max-width: $widthSP!important;
+		.upper {
+			display: none;
+		}
+		.lower {
+			height: 115px;
+			img {
+				padding-top: 30px;
+				padding-left: 20px;
+				height: 52px;
+			}
+			.headerBtn {
+				display: none;
+			}
+		}
+	}
+	.mainvisual {
+		max-width: $widthSP!important;
+		height: 330px;
+		background-image: url("../images/companyMainvisualImgSP.png");
+		background-size: 768px 330px;
+		.mainVisualImg {
+			display: none;
+		}
+		.overlay {
+			display: none;
+		}
+		.mainTxt_1 {
+			@include text(20px, white, 2px);
+       	 	margin: 105px 0px 0px 290px;
+		}
+		.mainTxt_2 {
+			@include text(20px, white, 1px);
+			font-family: $font2;
+			width: 90px;
+			margin: 170px 0px 0px 350px;
+		}
+	}
+	.breakcrumb {
+		@include text(14px, black, 1px);
+		max-width: $widthSP!important;
+		height: 30px;
+		padding-top: 5px;
+		p {
+			margin-left: 20px;
+		}
+	}
+	.mainContent {
+		max-width: $widthSP!important;
+		.mainContentTxt_1 {
+			@include textCenter(32px, black, 1px, 520px);
+			font-family: $font2;
+			padding: 35px 124px 0px;
+		}
+		.mainContentTxt_2 {
+			@include textCenter(25px, black, 1px, 330px);
+			font-family: $font2;
+			word-spacing: 2px;
+			padding: 10px 219px 0px;
+		}
+		.line {
+			margin: 40px 310px 0px;
+			display: flex;
+		}
+		.line1 {
+			width: 65px;
+		}
+		.line2 {
+			width: 65px;
+		}
+		.content {
+			@include textCenter(25px, black, 0px, 730px);
+			text-align: center;
+		}
+		.blocks {
+			display: inline;
+			max-width: $widthSP;
+			height: 100%;
+			margin-top: 75px;
+			.block {
+				width: 350px;
+				margin-left: 210px;
+				height: 140px;
+				margin-top: 30px;
+				p {
+					@include textCenter(20px, white, 0px, 200px);
+					text-align: center;
+				}
+			}
+			.block2 {
+				padding-top: 125px;
+			}
+			.block3 {
+				padding-top: 125px;
+			}
+		}
+	}
+	.contactContainer {
+		margin-top: 60px;
+		width: $widthSP;
+		height: 450px;
+		background-image: url("../images/companyContactImgSP.png");
+		background-size: 768px 100%;
+		.contactTxt_1 {
+			@include text(28px, white, -3px);
+			font-family: $font2;
+			padding-top: 45px;
+			text-shadow: 2px 2px 20px black;
+		}
+		.buttonsContact {
+			display: inline;
+			margin: 0px;
+			padding: 0px;
+		}
+		.contactBtn {
+			margin-left: 190px;
+			margin-top: 30px;
+			.phone {
+				@include text(28px, white, 1px);
+			}
+		}
+	}
+	.footer {
+		height: 100%;
+		.main {
+			width: $widthSP;
+			margin: 0px;
+			padding: 0px;
+			.infor {
+				display: block;
+				img {
+					margin-left: 265px;
+				}
+				.textFooterPC {
+					display: none;
+				}
+				.textFooterSP {
+					display: block;
+					@include text(16px, black, 1px);
+					text-align: center;
+					margin-bottom: 50px;
+				}
+			}
+			.lineDotted {
+				display: none;
+			}
+			.lists {
+				display: none;
+			}
+			.list {
+				display: none;
+			}
+			.bottom {
+				display: none;
+			}
 		}
 	}
 }
