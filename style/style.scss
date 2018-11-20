@@ -7,6 +7,7 @@ body {
 	width: 1900px;
 }
 $bgColor: #fcd000;
+$widthSP: 768px;
 $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
 // format text
 @mixin text($fontSize, $color, $letterSpacing) {
@@ -50,6 +51,9 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 			padding-left: 395px;
 			width: 235px;
 			height: 100%;
+		}
+		.fa-bars {
+			display: none;
 		}
 		.headerBtn {
 			display: flex;
@@ -107,6 +111,10 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 		@include textCenter(20px, white, -1px, 410px);
 		margin-top: 10px;
 	}
+}
+// textSPDesign 
+.textSPDesign {
+	display: none;
 }
 // service
 .serviceContainer {
@@ -206,6 +214,9 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 			p {
 				@include text(14px, black, -1px);
 			}
+			.fa-angle-right {
+				display: none;
+			}
 		}
 		.itemServiceGuide.first {
 			padding-left: 66px;
@@ -227,7 +238,7 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 		font-family: $font2;
 	}
 	.newsTxt_2 {
-		@include textCenter(14px, black, 0px, 1000px);
+		@include text(14px, black, 0px);
 		padding-left: 1365px;
 	}
 	.line {
@@ -271,11 +282,15 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 			margin: 20px 0px 20px;
 		}
 	}
+	.newsBtn {
+		display: none;
+	}
 }
 // company
 .company {
 	background-color: #eeeeee;
 	display: flex;
+	flex-direction: row-reverse;
 	width: 1110px;
 	height: 420px;
 	margin: 75px 395px 0px;
@@ -313,6 +328,9 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 		.companyBtn:hover {
 			cursor: pointer;
 		}
+	}
+	.companyBtnSPDesign {
+		display: none;
 	}
 }
 // recruit 
@@ -413,6 +431,9 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 				height: 100%;
 				margin-right: 70px;
 			}
+			.textFooterSP {
+				display: none;
+			}
 		}
 		.lineDotted {
 			border-bottom: 1px dotted black;
@@ -443,6 +464,349 @@ $font2: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho Pr
 		p {
 			@include textCenter(12px, white, 1px, 250px);
 			padding-top: 20px;
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	body {
+		max-width: $widthSP;
+		background-color: white;
+		margin: 0px;
+		padding: 0px;
+	}
+	.header{
+		height: 115px;
+		max-width: $widthSP!important;
+		.upper {
+			display: none;
+		}
+		.lower {
+			height: 115px;
+			img {
+				padding-top: 30px;
+				padding-left: 20px;
+				height: 52px;
+			}
+			.headerBtn {
+				display: none;
+			}
+			.fa-bars {
+				display: block;
+				margin: 30px 0px 0px 420px;
+			}
+		}
+	}
+	// mainvisual
+	.mainvisual {
+		width: $widthSP;
+		height: 500px;
+		background-image: url("../images/indexMainvisualImgSP.png");
+		background-size: $widthSP 500px;
+		.mainTxt {
+			margin: 0px;
+		}
+		.mainTxtImg {
+			width: 615px;
+			height: 60px;
+			margin: 0px;
+			padding: 90px 75px 0px;
+		}
+		.mainTxt_1 {
+			@include textCenter(20px, white, 0px, 470px);
+			margin-top: 20px;
+		}
+		.mainTxt_2 {
+			@include textCenter(20px, white, -1px, 410px);
+			margin-top: 10px;
+		}
+	}
+	.textSPDesign {
+		display: block;
+		@include text(22px, black, 1px);
+		width: $widthSP;
+		height: 205px;
+		background-color: #eeeeee;
+		padding-top: 30px;
+		text-align: center;
+		button {
+			background-color: white;
+			border: 1px #82141a solid;
+			width: 349px;
+			height: 70px;
+		}
+	}
+	// service  responsive
+	.serviceContainer {
+		background-color: white;
+		display: block;
+		width: $widthSP;
+		height: 1500px;
+		margin: 0px;
+		padding: 0px;
+		.service {
+			background-color: white;
+			width: $widthSP;
+			height: 765px;
+			margin: 0px;
+		}
+		.tab1{
+			width: $widthSP;
+		}
+		.serviceTxt_1 {
+			@include textCenter(23px, black, -2px, 170px);
+			font-family: $font2;
+			font-weight: 900;
+			padding-top: 10px;
+			margin-bottom: 0px;
+		}
+		.serviceTxt_2 {
+			@include textCenter(14px, black, 0px, 255px);
+		}
+		.arrow-down {
+			position: absolute;
+			z-index: 2;
+			margin: 0px;
+			padding: 0px;
+			margin-left: 390px;
+		}
+		.mainService {
+			display: inline;
+			width: $widthSP;
+			margin: 0px;
+			padding: 0px;
+			margin: 0px 45px 30px;
+			.itemService {
+				width: 490px;
+				img {
+					width: $widthSP;
+					padding: 0px;
+					margin: 0px;
+					height: 480px;
+				}
+			}
+			.serviceTxt_3 {
+				@include text(20px, black, 2px);
+				width: 650px;
+				margin-top: 225px;
+				margin-left: 60px;
+			}
+			.serviceTxt_4 {
+				@include text(20px, black, -2px);
+				width: 650;
+				margin-left: 60px;
+			}
+			.serviceBtn {
+				@include text(15px, black, 1px);
+				font-family: $font2;
+				background-color: $bgColor;
+				width: 350px;
+				height: 55px;
+				margin: 45px 0px 20px 210px;
+			}
+		}
+		.guide {
+			display: inline;
+			width: $widthSP;
+			height: 100%;
+			padding: 0px;
+			margin: 0px;
+			.serviceGuide {
+				text-align: center;
+				color: white;
+				background-color: #222222;
+				width: 650px;
+				height: 50px;
+				margin-left: 60px;
+				.serviceTxt_5 {
+					@include text(25px, white, 1px);
+					font-family: $font2;
+					padding-top: 5px;
+				}
+				.serviceTxt_6 {
+					display: none;
+				}
+			}
+			.itemServiceGuide {
+				background-color: #eeeeee;
+				display: flex;
+				text-align: left;
+				width: 650px;
+				padding: 0px;
+				margin-left: 60px;
+				img {
+					width: 90px;
+					height: 90px;
+					-moz-border-radius: 45px;
+    				-webkit-border-radius: 45px;
+					border-radius: 45px;
+					display: inline-block;
+					margin: 20px 20px 10px;
+				}
+				p {
+					@include text(32px, black, -1px);
+					display: inline-block;
+					width: 250px;
+					padding: 35px 33px 0px;
+				}
+				.fa-angle-right {
+					display: block;
+					font-size: 25px;
+					font-weight: bold;
+					margin: 50px 0px 0px 70px;
+				}
+			}
+			.itemServiceGuide.first {
+				padding-left: 0px;
+			}
+			.itemServiceGuide.last {
+				padding-right: 0px;
+			}
+		}
+	}
+	// news  responsive
+	.newsContainer {
+		display: block;
+		width: $widthSP;
+		height: 900px;
+		margin: 0px;
+		padding: 0px;
+		.newsTxt_2 {
+			display: none;
+		}
+		.line {
+			width: 650px;
+			margin: 20px 60px 0px;
+		}
+		.rows {
+			padding: 0px;
+			margin-top: 30px;
+			width: 650px;
+			padding-left: 60px;
+			height: 590px;
+			.fa-angle-right {
+				display: none;
+			}
+			.row {
+				width: 650px;
+				.title {
+					display: block;
+					margin: 20px 0px 0px 0px;
+				}
+			}
+		}
+		.newsBtn {
+			display: block;
+			@include text(15px, black, 1px);
+			font-family: $font2;
+			background-color: $bgColor;
+			width: 350px;
+			height: 55px;
+			margin: 25px 0px 20px 210px;
+		}
+	}
+	// company  responsive
+	.company {
+		display: block;
+		width: $widthSP;
+		height: 900px;
+		margin: 0px;
+		padding: 0px;
+		img {
+			width: 650px;
+			margin: 20px 60px 0px;
+		}
+		.companyInfor { 
+			padding-top: 10px;
+		}
+		.companyBtn {
+			display: none;
+		}
+		.companyBtnSPDesign {
+			display: block;
+			@include text(15px, black, 1px);
+			font-family: $font2;
+			background-color: $bgColor;
+			width: 350px;
+			height: 55px;
+			margin: 25px 0px 20px 210px;
+		}
+	}
+	// recruit responsive
+	.recruitContainer {
+		display: block;
+		width: $widthSP;
+		height: 550px;
+		margin: 0px;
+		padding: 0px;
+		.recruitInfor {
+			background-color: white;
+		}
+		.recruitImg {
+			width: 650px;
+			margin: 20px 60px 0px;
+		}
+	}
+	// contact responsive
+	.contactContainer {
+		width: $widthSP;
+		margin: 0px;
+		padding: 0px;
+		height: 450px;
+		background-image: url("../images/companyContactImgSP.png");
+		background-size: 768px 100%;
+		.contactTxt_1 {
+			@include text(28px, white, -3px);
+			font-family: $font2;
+			padding-top: 45px;
+			text-shadow: 2px 2px 20px black;
+		}
+		.buttonsContact {
+			display: inline;
+			margin: 0px;
+			padding: 0px;
+		}
+		.contactBtn {
+			margin-left: 190px;
+			margin-top: 30px;
+			.phone {
+				@include text(28px, white, 1px);
+			}
+		}
+	}
+	// footer responsive
+	.footer {
+		height: 500px;
+		.main {
+			width: $widthSP;
+			margin: 0px;
+			padding: 0px;
+			.infor {
+				display: block;
+				img {
+					margin-left: 265px;
+				}
+				.textFooterPC {
+					display: none;
+				}
+				.textFooterSP {
+					display: block;
+					@include text(16px, black, 1px);
+					text-align: center;
+					margin-bottom: 50px;
+				}
+			}
+			.lineDotted {
+				display: none;
+			}
+			.lists {
+				display: none;
+			}
+			.list {
+				display: none;
+			}
+			.bottom {
+				display: none;
+			}
 		}
 	}
 }
